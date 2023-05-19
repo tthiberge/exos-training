@@ -1,19 +1,38 @@
-
-# SOLUTION 3 qui MARCHE - Encore plus court que Solution 1 - Mais Sol 1 me permettait de tester .prepend que je cherchais la veille
+# Solution 4 - Me permet d'utilise l'itérateur reverse_each
 def reverse_words(string)
-  string.split.reverse.join(' ') # reverse marche sur un array
+  output = []
+  string.split.reverse_each {|word| output << word}
+  return output.join(' ')
 end
 
 string1 = "Hello my Love"
 
 3.times do
   time1 = Time.now
-  reverse_words(string1)
+  p reverse_words(string1)
   time2 = Time.now
 
   durée = time2 - time1
   p "#{durée * 10**6} microseconds"
 end
+
+
+
+# # SOLUTION 3 qui MARCHE - Encore plus court que Solution 1 - Mais Sol 1 me permettait de tester .prepend que je cherchais la veille
+# def reverse_words(string)
+#   string.split.reversetes.join(' ') # reverse marche sur un array
+# end
+
+# string1 = "Hello my Love"
+
+# 3.times do
+#   time1 = Time.now
+#   reverse_words(string1)
+#   time2 = Time.now
+
+#   durée = time2 - time1
+#   p "#{durée * 10**6} microseconds"
+# end
 
 
 
