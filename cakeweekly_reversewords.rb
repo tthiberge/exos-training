@@ -1,10 +1,19 @@
 
+# SOLUTION 3 qui MARCHE - Encore plus court que Solution 1 - Mais Sol 1 me permettait de tester .prepend que je cherchais la veille
+def reverse_words(string)
+  string.split.reverse.join(' ') # reverse marche sur un array
+end
 
+string1 = "Hello my Love"
 
+3.times do
+  time1 = Time.now
+  reverse_words(string1)
+  time2 = Time.now
 
-
-
-
+  durée = time2 - time1
+  p "#{durée * 10**6} microseconds"
+end
 
 
 
