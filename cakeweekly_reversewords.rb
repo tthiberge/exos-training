@@ -7,9 +7,9 @@ end
 
 string1 = "Hello my Love"
 
-3.times do
+100.times do
   time1 = Time.now
-  p reverse_words(string1)
+  reverse_words(string1)
   time2 = Time.now
 
   durée = time2 - time1
