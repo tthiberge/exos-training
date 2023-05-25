@@ -8,22 +8,23 @@ def dig_pow(n, p)
     sum += digit**(p+index)
   end
 
-  sum % n == 0 ? sum.fdiv(n).to_i : -1
+  sum % n == 0 ? sum / n : -1 # Pas besoin de fdiv justement, ça crée un float
 end
 
 
+# Les autres variantes sont souvent des gens qui ne connaissent pas la methode .digits
+# Donc qui font .to_s.chars.map.with_index(p) ou .to_s.chars.each_with_index(p)
 
+# Au lieu d'initialiser la somme et incrémenter, j'aurais pu faire:
+# sum = n.digits.each_with_index.map { |dig, i| dig.to_i ** (p + i) }.reduce(:+)
 
-
-
-
-
-
-
-
-
-
-
+# Variante intéressante
+# On indique l'écrémentation de p directement DANS le bloc du each
+def dig_pow(n, p)
+  sum = 0
+  n.digits.reverse.each{ |d| sum += d ** p; p += 1 }
+  sum% n == 0 ? sum / n : -1
+end
 
 
 
