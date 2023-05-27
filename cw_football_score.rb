@@ -48,9 +48,9 @@ def points(games)
   score
 end
 
-# Ternaire nesté! J'y ai pensé mais je ne savais pas si c'était best practice ou pas!
+# Ternaire nesté!
+# J'y ai pensé mais je ne savais pas si c'était best practice ou pas!
 # Seulement 3 best practice
 def points(g)
   g.map {|n| n[0].to_i > n[2].to_i ? 3 : (n[0].to_i == n[2].to_i ? 1 : 0) }.sum
 end
-
