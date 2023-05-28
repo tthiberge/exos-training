@@ -31,3 +31,16 @@ def get_indices_of_item_weights(arr, limit)
   return null
 end
 
+# Solution que je comprends
+def get_indices_of_item_weights(array, limit)
+  array.each_with_index do |a, i|
+    array.each_with_index do |b, j|
+      return [i, j] if a + b == limit && i != j
+    end
+  end
+
+  nil
+end
+# -> Notamment, au lieu de faire for i in a..b et j in c..d,
+# Je peux faire each_with_index, c'est pas mal, avec i!=j
+# (mais certains doublons si je dois compter des solutions)
