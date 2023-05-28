@@ -1,7 +1,7 @@
-def high_and_low(numbers)
-  numbers.split.map(&:succ).minmax.reverse.join(' ')
+#
+
+u=0.1
+50.times do
+    u=4*u*(1-u)
+    puts(u)
 end
-
-numbers_1 = ""
-
-p high_and_low(numbers_1)
