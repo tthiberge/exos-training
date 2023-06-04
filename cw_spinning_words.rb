@@ -10,3 +10,10 @@
 def spin_words(string)
   string.split.map{|word| word.length >= 5 ? word.reverse : word}.join(' ')
 end
+
+# Variantes
+# Smart en utilisant les regexp
+def spinWords(string)
+  string.gsub(/\w{5,}/, &:reverse)
+end
+
