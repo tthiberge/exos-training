@@ -60,3 +60,5 @@ def century(year)
   b > 0 ? a + 1 : a
 end
 # Améliore grandement ma solution. en regardant le deuxième élement de l'array, je regarde directement si c'est plus grand que 0. Si oui, je prends le premier élément + 1, sinon le premier élément seul
+
+p "hello"
