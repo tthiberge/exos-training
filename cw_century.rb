@@ -33,3 +33,30 @@ def century(year)
     end
   end
 end
+
+# Variantes
+
+# Waouh - J'adore! NB: Diviser par un float permet de renvoyer un float!
+def century(year)
+  ( year / 100.0 ).ceil
+  # year.fdiv(100).ceil
+  # (year.to_f/100).ceil
+end
+
+# Un peu dans le même genre
+def century(year)
+  (year + 99) / 100
+end
+# La division integer fait un .floor
+
+# Nickel, moi qui voulait jouer avec les 00 éventuellement
+def century(year)
+  (year%100)==0 ? (year/100) : (year/100)+1
+end
+
+# Pas mal
+def century(year)
+  a,b = year.divmod(100)
+  b > 0 ? a + 1 : a
+end
+# Améliore grandement ma solution. en regardant le deuxième élement de l'array, je regarde directement si c'est plus grand que 0. Si oui, je prends le premier élément + 1, sinon le premier élément seul
