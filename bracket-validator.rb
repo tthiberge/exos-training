@@ -1,4 +1,4 @@
-BRACKET_OPENERS = ['(', '[', '{']
+eBRACKET_OPENERS = ['(', '[', '{']
 BRACKET_CLOSERS = [')', ']', '}']
 
 p BRACKET_OPENERS
